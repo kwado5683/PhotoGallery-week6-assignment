@@ -5,9 +5,9 @@
 import React, { useState, createContext } from "react";
 import Gallery from "./Components/Gallery.jsx";
 import Images from "./Components/Images.jsx";
-import useAxios from "./Hooks/useAxios.jsx"
 import Jumbutron from "./Components/Jumbutron.jsx";
 import SearchField from "./Components/SearchField.jsx";
+import {useAxios} from "./Hooks/useAxios.js";
 
 export const ImageContext = createContext();
 
@@ -19,7 +19,7 @@ export default function App() {
     isLoading,
     error,
     fetchData,
-  } = useAxios(`search/photos?page=1&query=office&client_id=${import.meta.env.VITE_REACT_APP_ACCESS_KEY}`);
+  } = useAxios(`https://api.unsplash.com/search/photos?page=1&query=office&client_id=${import.meta.env.VITE_REACT_APP_ACCESS_KEY}`);
 
   const value = {
     response,
