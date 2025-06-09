@@ -1,8 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I struggled with this project a lot.
+I know it's because I am working with react for the first time. I lost my way so many times and actually got frustrated.
+I managed to get the mvp done using resources from the class note and youtube searches. I found a video on youtube for building a photo gallery and decided to follow along. I still could'nt get the required functionality but I learnt new ways of writing code and some new tools like useAxios and Modal. Although I don't have full understanding just yet, but I am happy with the option and being able to get results online and try to debug and reuse another person's code.
