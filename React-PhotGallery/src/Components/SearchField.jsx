@@ -10,7 +10,7 @@ export default function SearchField() {
   const { fetchData, setSearchImage } = useContext(ImageContext);
 
   const handleSearch = () => {
-    const query = `search/photos?page=1&query=${searchValue}&client_id=${import.meta.env.VITE_REACT_APP_ACCESS_KEY}`;
+    const query = `https://api.unsplash.com/search/photos?page=1&query=${searchValue}&client_id=${import.meta.env.VITE_REACT_APP_ACCESS_KEY}`;
     fetchData(query);
     setSearchImage(searchValue);
     setSearchValue("");
