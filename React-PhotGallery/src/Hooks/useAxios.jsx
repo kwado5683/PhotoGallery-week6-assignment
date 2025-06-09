@@ -1,0 +1,37 @@
+
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+export default function useAxios(param) {
+  const [response, setResponse] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  axios.defaults.baseURL = "https://api.unsplash.com";
+
+  const fetchData = async (url) => {
+    try {
+      setIsLoading(true);
+      const res = await axios(url);
+      setResponse(res.data.results);
+      setError(""); // Clear previous errors
+    } catch (err) {
+      setError(err.message || "An error occurred");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (param) {
+      fetchData(param);
+    }
+  }, [param]);
+
+  return {
+    response,
+    isLoading,
+    error,
+    fetchData,
+  };
+}
